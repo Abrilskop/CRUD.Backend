@@ -1,4 +1,4 @@
-# Sistema CRUD en Backend
+# Sistema CRUD - Backend
 
 Este repositorio contiene una implementación de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) en el backend utilizando **C#** y **.NET**. 
 El proyecto está estructurado mediante la arquitectura hexagonal.
