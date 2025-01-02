@@ -52,19 +52,19 @@ end
 -- create empleado
 create procedure [dbo].[spu_create_cliente]
 (
-@idCliente int
+	@idCliente INT IDENTITY(1,1) PRIMARY KEY,
+    @nombre VARCHAR(100),
+    @apellidoPaterno VARCHAR(100),
+	@apellidoMaterno VARCHAR(100), 
+    @telefono VARCHAR(20),
+    @direccion VARCHAR(300),
+    @fecha_registro DATETIME DEFAULT GETDATE()
+    
 )
 as
 begin
-	SELECT
-	idCliente,
-    nombre,
-    apellidoPaterno,
-	apellidoMaterno,
-    telefono,
-    direccion,
-    fecha_registro
-	FROM
-	cliente
-	WHERE idCliente = @idCliente
+	IF (EXIST (SELECT * FROM cliente WHERE idCliente = @idCliente))
+    begin
+        set @mssError
+    end
 end
