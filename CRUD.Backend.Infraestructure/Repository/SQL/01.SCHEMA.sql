@@ -52,7 +52,7 @@ begin
 	WHERE idCliente = @idCliente
 end
 
--- create empleado
+-- create cliente
 create procedure [dbo].[spu_create_cliente]
 (
     @nombre VARCHAR(100),
@@ -93,5 +93,49 @@ begin
 		@fecha_registro
 	)
 	set @mssError ='Cliente insertado'
+end
+
+-- editar cliente
+create procedure [dbo].[spu_update_cliente]
+(
+	@idCliente INT,
+    @nombre VARCHAR(100),
+    @apellidoPaterno VARCHAR(100),
+	@apellidoMaterno VARCHAR(100), 
+    @telefono VARCHAR(20),
+	@docIdentidad VARCHAR (8),
+    @direccion VARCHAR(300),
+    @fecha_registro DATETIME,
+    @mssError VARCHAR(100)
+)
+as
+begin
+	IF (EXISTS (SELECT docIdentidad FROM cliente WHERE docIdentidad = @docIdentidad
+	and idCliente != @idCliente)) -- valido si tiene el mismo DNI
+    begin
+        set @mssError = 'El cliente ya se encuentraesta registrado'
+        return
+    end
+		
+	UPDATE cliente SET
+		nombre = @nombre,
+		apellidoPaterno = @apellidoPaterno,
+		apellidoMaterno = @apellidoMaterno,
+		telefono = @telefono,
+		docIdentidad = @docIdentidad,
+		direccion = @direccion,
+		fecha_registro = @fecha_registro
+	WHERE idCliente = @idCliente
+	set @mssError =''
+end
+
+-- eliminar cliente
+create procedure [dbo].[spu_delete_cliente]
+(
+	@idCliente INT
+)
+as
+begin
+	DELETE from cliente WHERE idCliente = @idCliente
 
 end
