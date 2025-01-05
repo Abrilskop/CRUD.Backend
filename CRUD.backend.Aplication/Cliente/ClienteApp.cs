@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CRUD.backend.Aplication.Clientes
 {
-    internal class ClienteApp
+    public class ClienteApp
     {
+        public ClienteApp() { }
     }
 }

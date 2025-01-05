@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Backend.API", "CRUD.Backend\CRUD.Backend.API.csproj", "{5042F17A-3870-4CFB-AF0E-91ACBE8F88EC}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Backend.API", "CRUD.Ba
 		{C5BCAC7C-C902-4296-A3D3-BE6F34A53A66} = {C5BCAC7C-C902-4296-A3D3-BE6F34A53A66}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.backend.Aplication", "CRUD.backend.Aplication\CRUD.backend.Aplication.csproj", "{C5BCAC7C-C902-4296-A3D3-BE6F34A53A66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Backend.Aplication", "CRUD.backend.Aplication\CRUD.Backend.Aplication.csproj", "{C5BCAC7C-C902-4296-A3D3-BE6F34A53A66}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6D984188-2CEA-483E-98E6-FE536C04CD54} = {6D984188-2CEA-483E-98E6-FE536C04CD54}
 	EndProjectSection

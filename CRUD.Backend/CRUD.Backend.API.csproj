@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+
+	<ItemGroup>
+		<ProjectReference Include="..\CRUD.backend.Aplication\CRUD.Backend.Aplication.csproj" />
+		<ProjectReference Include="..\CRUD.Backend.Application\CRUD.Backend.Application.csproj" />
+
+	</ItemGroup>
 </Project>
